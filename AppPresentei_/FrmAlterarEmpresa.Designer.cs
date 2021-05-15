@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label5 = new System.Windows.Forms.Label();
-            this.CmbNomeCatao = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtDigito = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtNumero = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.NomeEmpresa = new System.Windows.Forms.Label();
@@ -45,64 +39,6 @@
             this.txtSenhaNova = new System.Windows.Forms.TextBox();
             this.BtnDesativar = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.label5.Location = new System.Drawing.Point(315, 264);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 20);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Nome cartão";
-            // 
-            // CmbNomeCatao
-            // 
-            this.CmbNomeCatao.FormattingEnabled = true;
-            this.CmbNomeCatao.Items.AddRange(new object[] {
-            "Santader",
-            "Elo"});
-            this.CmbNomeCatao.Location = new System.Drawing.Point(438, 264);
-            this.CmbNomeCatao.Name = "CmbNomeCatao";
-            this.CmbNomeCatao.Size = new System.Drawing.Size(225, 24);
-            this.CmbNomeCatao.TabIndex = 24;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.label4.Location = new System.Drawing.Point(358, 330);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 20);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Digitos";
-            // 
-            // txtDigito
-            // 
-            this.txtDigito.Location = new System.Drawing.Point(438, 330);
-            this.txtDigito.Name = "txtDigito";
-            this.txtDigito.Size = new System.Drawing.Size(225, 22);
-            this.txtDigito.TabIndex = 22;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.label3.Location = new System.Drawing.Point(300, 298);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 20);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Numero cartão";
-            // 
-            // txtNumero
-            // 
-            this.txtNumero.Location = new System.Drawing.Point(438, 298);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(225, 22);
-            this.txtNumero.TabIndex = 20;
             // 
             // label2
             // 
@@ -163,7 +99,7 @@
             this.BtnAlterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(2)))), ((int)(((byte)(4)))));
             this.BtnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAlterar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnAlterar.Location = new System.Drawing.Point(451, 358);
+            this.BtnAlterar.Location = new System.Drawing.Point(453, 269);
             this.BtnAlterar.Name = "BtnAlterar";
             this.BtnAlterar.Size = new System.Drawing.Size(191, 37);
             this.BtnAlterar.TabIndex = 13;
@@ -194,7 +130,7 @@
             this.BtnDesativar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(2)))), ((int)(((byte)(4)))));
             this.BtnDesativar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDesativar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnDesativar.Location = new System.Drawing.Point(451, 411);
+            this.BtnDesativar.Location = new System.Drawing.Point(453, 323);
             this.BtnDesativar.Name = "BtnDesativar";
             this.BtnDesativar.Size = new System.Drawing.Size(191, 37);
             this.BtnDesativar.TabIndex = 28;
@@ -212,12 +148,6 @@
             this.Controls.Add(this.BtnDesativar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtSenhaNova);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.CmbNomeCatao);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtDigito);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.NomeEmpresa);
@@ -234,13 +164,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox CmbNomeCatao;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtDigito;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label NomeEmpresa;

@@ -26,6 +26,7 @@ namespace AppPresentei_
             foreach (var usuarios in usuario.BuscarTodos())
             {
                 listBoxUsuarios.Items.Add("ID USUARIO: " + usuarios.Id + "          " + "USUARIO: " + usuarios.Nome + "          " + "EMAIL: " + usuarios.Email + "          " + "TELEFONE: " + usuarios.Telefone);
+
                 qtd += 1;
                 txtQtd.Text = Convert.ToString(qtd);
             }

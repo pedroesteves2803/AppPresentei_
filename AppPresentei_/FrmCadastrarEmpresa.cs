@@ -19,7 +19,7 @@ namespace AppPresentei_
 
         private void BtnCadastrar_Click(object sender, EventArgs e)
         {
-            Empresa empresa = new Empresa(txtNome.Text, txtCnpj.Text, txtSenha.Text, CmbNomeCatao.Text, txtNumero.Text, txtDigito.Text);
+            Empresa empresa = new Empresa(txtNome.Text, txtCnpj.Text, txtSenha.Text);
             empresa.Inserir(empresa);
             MessageBox.Show("Bem vindo(a) !!!!");
             FrmLogar logar = new FrmLogar();

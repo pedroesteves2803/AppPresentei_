@@ -58,7 +58,7 @@ namespace AppPresentei_
         {
 
             var cmd = Banco.AbrirConexao();
-            cmd.CommandText = "insert tb_produtosEmpresas values(null, @nome_produto, @valor_produto, @link_produto, @imagem_produto, @marca_produto," + Program.idLogado.Id + ");";
+            cmd.CommandText = "insert tb_produtosempresas values(null, @nome_produto, @valor_produto, @link_produto, @imagem_produto, @marca_produto," + Program.idLogado.Id + ");";
             cmd.Parameters.Add("@nome_produto", MySqlDbType.VarChar).Value = item.Nome;
             cmd.Parameters.Add("@valor_produto", MySqlDbType.VarChar).Value = item.imagem;
             cmd.Parameters.Add("@link_produto", MySqlDbType.VarChar).Value = item.valor;
@@ -70,7 +70,7 @@ namespace AppPresentei_
         public void BuscarPorId(string nome)
         {
             var cmd = Banco.AbrirConexao();
-            cmd.CommandText = "select * from tb_produtosEmpresas where nome_produto = " + nome;
+            cmd.CommandText = "select * from tb_produtosempresas where nome_produto = " + nome;
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {
@@ -89,7 +89,7 @@ namespace AppPresentei_
         {
             List<Item> item = new List<Item>();
             var cmd = Banco.AbrirConexao();
-            cmd.CommandText = "select * from tb_produtosEmpresas where id_empresa =" + Program.idLogado.Id;
+            cmd.CommandText = "select * from tb_produtosempresas where id_empresa =" + Program.idLogado.Id;
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {
@@ -109,7 +109,7 @@ namespace AppPresentei_
         public void Alterar(Item item) // para alterar aqui no visual e passar para o Mysql
         {
             MySqlCommand cmd = Banco.AbrirConexao();
-            cmd.CommandText = "update tb_produtosEmpresas set nome_produto = @nome_produto ,  valor_produto = @valor_produto, link_produto = @link_produto, imagem_produto = @imagem_produto, marca_produto = @marca_produto where id_produto = @id ;";
+            cmd.CommandText = "update tb_produtosempresas set nome_produto = @nome_produto ,  valor_produto = @valor_produto, link_produto = @link_produto, imagem_produto = @imagem_produto, marca_produto = @marca_produto where id_produto = @id ;";
             cmd.Parameters.Add("@id", MySqlDbType.Int32).Value = item.idProduto;
             cmd.Parameters.Add("@nome_produto", MySqlDbType.VarChar).Value = item.nome;
             cmd.Parameters.Add("@valor_produto", MySqlDbType.VarChar).Value = item.valor;
@@ -122,7 +122,7 @@ namespace AppPresentei_
         public void Exluir(int id) // para alterar aqui no visual e passar para o Mysql
         {
             MySqlCommand cmd = Banco.AbrirConexao();
-            cmd.CommandText = "DELETE FROM tb_produtosEmpresas where id_produto = " + id;
+            cmd.CommandText = "DELETE FROM tb_produtosempresas where id_produto = " + id;
             cmd.ExecuteNonQuery();
         }
     }

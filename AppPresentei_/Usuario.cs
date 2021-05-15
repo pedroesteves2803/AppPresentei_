@@ -46,7 +46,7 @@ namespace AppPresentei_
             bool valido = false;
             var cmd = Banco.AbrirConexao();
             cmd.CommandText =
-                "select * from tb_empresas where senha_empresa = md5(@senha) and cnpj_empresa = @cnpj and status_empresa = 1;";
+                "select * from tb_empresa where senha_empresa = md5(@senha) and cnpj_empresa = @cnpj and status_empresa = 1;";
             cmd.Parameters.Add("@senha", MySqlDbType.VarChar).Value = usuario.Senha;
             cmd.Parameters.Add("@cnpj", MySqlDbType.VarChar).Value = usuario.cnpj;
             var dr = cmd.ExecuteReader();
@@ -56,10 +56,7 @@ namespace AppPresentei_
                 Nome = dr.GetString(1);
                 cnpj = dr.GetString(2);
                 Senha = dr.GetString(3);
-                nomeCartao = dr.GetString(4);
-                numeroCartao = dr.GetString(5);
-                digitos = dr.GetString(6);
-                status = dr.GetInt32(7);
+                status = dr.GetInt32(4);
                 valido = true;
             }
 
