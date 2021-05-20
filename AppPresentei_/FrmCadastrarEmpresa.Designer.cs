@@ -36,6 +36,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnVoltar = new System.Windows.Forms.Button();
+            this.txtLogo = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BtnCadastrar
@@ -43,7 +45,7 @@
             this.BtnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(2)))), ((int)(((byte)(4)))));
             this.BtnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCadastrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnCadastrar.Location = new System.Drawing.Point(218, 169);
+            this.BtnCadastrar.Location = new System.Drawing.Point(221, 198);
             this.BtnCadastrar.Name = "BtnCadastrar";
             this.BtnCadastrar.Size = new System.Drawing.Size(191, 37);
             this.BtnCadastrar.TabIndex = 0;
@@ -118,12 +120,32 @@
             this.BtnVoltar.UseVisualStyleBackColor = false;
             this.BtnVoltar.Click += new System.EventHandler(this.BtnVoltar_Click);
             // 
+            // txtLogo
+            // 
+            this.txtLogo.Location = new System.Drawing.Point(205, 170);
+            this.txtLogo.Name = "txtLogo";
+            this.txtLogo.Size = new System.Drawing.Size(225, 22);
+            this.txtLogo.TabIndex = 14;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.label3.Location = new System.Drawing.Point(105, 172);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 20);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Link Logo";
+            // 
             // FrmCadastrarEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(241)))), ((int)(((byte)(223)))));
             this.ClientSize = new System.Drawing.Size(620, 310);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtLogo);
             this.Controls.Add(this.BtnVoltar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -151,5 +173,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnVoltar;
+        private System.Windows.Forms.TextBox txtLogo;
+        private System.Windows.Forms.Label label3;
     }
 }

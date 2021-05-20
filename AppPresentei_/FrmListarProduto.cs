@@ -25,7 +25,7 @@ namespace AppPresentei_
             {
                 listBoxProdutos.Items.Add("ID produto: " + produto.Id + " - " + "Produto: " + produto.Nome + " - " + "Imagem: " + produto.Imagem +
                 " - " + "Valor: " + produto.Valor + " - " + "Link :" + produto.Link + " - " + "Id empresa: " + produto.IdEmpresa + " - " + "Marca: " 
-                + produto.Marca);
+                + produto.Marca + " - " + "Categoria: " + produto.Categoria);
             }
 
         }

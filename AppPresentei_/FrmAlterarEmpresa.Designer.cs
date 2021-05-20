@@ -38,6 +38,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtSenhaNova = new System.Windows.Forms.TextBox();
             this.BtnDesativar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtLogo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label2
@@ -45,7 +47,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.label2.Location = new System.Drawing.Point(314, 202);
+            this.label2.Location = new System.Drawing.Point(314, 227);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 20);
             this.label2.TabIndex = 19;
@@ -75,7 +77,7 @@
             // 
             // txtSenhaAntiga
             // 
-            this.txtSenhaAntiga.Location = new System.Drawing.Point(438, 200);
+            this.txtSenhaAntiga.Location = new System.Drawing.Point(438, 225);
             this.txtSenhaAntiga.Name = "txtSenhaAntiga";
             this.txtSenhaAntiga.Size = new System.Drawing.Size(225, 22);
             this.txtSenhaAntiga.TabIndex = 16;
@@ -99,7 +101,7 @@
             this.BtnAlterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(2)))), ((int)(((byte)(4)))));
             this.BtnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAlterar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnAlterar.Location = new System.Drawing.Point(453, 269);
+            this.BtnAlterar.Location = new System.Drawing.Point(453, 305);
             this.BtnAlterar.Name = "BtnAlterar";
             this.BtnAlterar.Size = new System.Drawing.Size(191, 37);
             this.BtnAlterar.TabIndex = 13;
@@ -112,7 +114,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.label6.Location = new System.Drawing.Point(324, 234);
+            this.label6.Location = new System.Drawing.Point(324, 259);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(96, 20);
             this.label6.TabIndex = 27;
@@ -120,7 +122,7 @@
             // 
             // txtSenhaNova
             // 
-            this.txtSenhaNova.Location = new System.Drawing.Point(438, 232);
+            this.txtSenhaNova.Location = new System.Drawing.Point(438, 257);
             this.txtSenhaNova.Name = "txtSenhaNova";
             this.txtSenhaNova.Size = new System.Drawing.Size(225, 22);
             this.txtSenhaNova.TabIndex = 26;
@@ -130,13 +132,31 @@
             this.BtnDesativar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(2)))), ((int)(((byte)(4)))));
             this.BtnDesativar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDesativar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnDesativar.Location = new System.Drawing.Point(453, 323);
+            this.BtnDesativar.Location = new System.Drawing.Point(453, 359);
             this.BtnDesativar.Name = "BtnDesativar";
             this.BtnDesativar.Size = new System.Drawing.Size(191, 37);
             this.BtnDesativar.TabIndex = 28;
             this.BtnDesativar.Text = "Desativar conta";
             this.BtnDesativar.UseVisualStyleBackColor = false;
             this.BtnDesativar.Click += new System.EventHandler(this.BtnDesativar_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.label3.Location = new System.Drawing.Point(344, 197);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 20);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Link logo";
+            // 
+            // txtLogo
+            // 
+            this.txtLogo.Location = new System.Drawing.Point(438, 197);
+            this.txtLogo.Name = "txtLogo";
+            this.txtLogo.Size = new System.Drawing.Size(225, 22);
+            this.txtLogo.TabIndex = 29;
             // 
             // FrmAlterarEmpresa
             // 
@@ -145,6 +165,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(241)))), ((int)(((byte)(223)))));
             this.ClientSize = new System.Drawing.Size(1068, 534);
             this.ControlBox = false;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtLogo);
             this.Controls.Add(this.BtnDesativar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtSenhaNova);
@@ -174,5 +196,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtSenhaNova;
         private System.Windows.Forms.Button BtnDesativar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtLogo;
     }
 }

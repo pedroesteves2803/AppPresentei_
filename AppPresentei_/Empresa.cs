@@ -13,12 +13,15 @@ namespace AppPresentei_
         private string nome;
         private string cnpj;
         private string senha;
+        private string logo;
 
         public int Id { get => id; set => id = value; }
         public string Nome { get => nome; set => nome = value; }
         public string Cnpj { get => cnpj; set => cnpj = value; }
         public string Senha { get => senha; set => senha = value; }
         public string SenhaNormal { get => senha; set => senha = value; }
+        public string Logo { get => logo; set => logo = value; }
+
 
         public Empresa()
         {
@@ -30,22 +33,25 @@ namespace AppPresentei_
             Nome = nome;
             Cnpj = cnpj;
             Senha = senha;
+
         }
 
-        public Empresa(string nome, string cnpj, string senha)
+        public Empresa(string nome, string cnpj, string senha, string logo)
         {
             Nome = nome;
             Cnpj = cnpj;
             Senha = senha;
+            Logo = logo;
         }
 
         public void Inserir(Empresa empresa)
         {
             var cmd = Banco.AbrirConexao();
-            cmd.CommandText = "insert tb_empresa values(null, @nome_empresa, @cnpj_empresa, md5(@senha_empresa), @status_empresa);";
+            cmd.CommandText = "insert tb_empresa values(null, @nome_empresa, @cnpj_empresa, md5(@senha_empresa), @logo_empresa, @status_empresa);";
             cmd.Parameters.Add("@nome_empresa", MySqlDbType.VarChar).Value = empresa.Nome;
             cmd.Parameters.Add("@cnpj_empresa", MySqlDbType.VarChar).Value = empresa.Cnpj;
             cmd.Parameters.Add("@senha_empresa", MySqlDbType.VarChar).Value = empresa.Senha;
+            cmd.Parameters.Add("@logo_empresa", MySqlDbType.VarChar).Value = empresa.Logo;
             cmd.Parameters.Add("@status_empresa", MySqlDbType.VarChar).Value = 1;
             cmd.ExecuteNonQuery();
         }
@@ -53,10 +59,11 @@ namespace AppPresentei_
         public void Alterar(Empresa empresa)
         {
             MySqlCommand cmd = Banco.AbrirConexao();
-            cmd.CommandText = "update tb_empresa set nome_empresa = @nome_empresa ,  cnpj_empresa = @cnpj_empresa, senha_empresa = md5(@senha_empresa) where id_empresa = " + Program.idLogado.Id;
+            cmd.CommandText = "update tb_empresa set nome_empresa = @nome_empresa ,  cnpj_empresa = @cnpj_empresa, senha_empresa = md5(@senha_empresa), logo_empresa = @logo_empresa where id_empresa = " + Program.idLogado.Id;
             cmd.Parameters.Add("@nome_empresa", MySqlDbType.VarChar).Value = empresa.Nome;
             cmd.Parameters.Add("@cnpj_empresa", MySqlDbType.VarChar).Value = empresa.Cnpj;
             cmd.Parameters.Add("@senha_empresa", MySqlDbType.VarChar).Value = empresa.Senha;
+            cmd.Parameters.Add("@logo_empresa", MySqlDbType.VarChar).Value = empresa.Logo;
             cmd.ExecuteNonQuery();
         }
 
@@ -144,3 +151,4 @@ namespace AppPresentei_
 
     }
 }
+

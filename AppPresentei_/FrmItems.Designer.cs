@@ -38,6 +38,8 @@
             this.txtLinkImg = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -47,9 +49,9 @@
             this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(2)))), ((int)(((byte)(4)))));
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSalvar.Location = new System.Drawing.Point(435, 316);
+            this.btnSalvar.Location = new System.Drawing.Point(430, 323);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(218, 43);
+            this.btnSalvar.Size = new System.Drawing.Size(223, 43);
             this.btnSalvar.TabIndex = 0;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
@@ -137,6 +139,36 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "link da imagen";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.label6.Location = new System.Drawing.Point(333, 297);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 20);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Categoria";
+            // 
+            // cmbCategoria
+            // 
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Items.AddRange(new object[] {
+            "Casa e construção",
+            "Beleza e Cuidado Pessoal",
+            "Eletodomésticos ",
+            "Eletoportáteis",
+            "Ferramentas",
+            "Informática",
+            "Moda e acessórios",
+            "Móveis e decorações",
+            "Saúde",
+            "Utilidades domésticas"});
+            this.cmbCategoria.Location = new System.Drawing.Point(430, 297);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(223, 24);
+            this.cmbCategoria.TabIndex = 14;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -162,6 +194,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(241)))), ((int)(((byte)(223)))));
             this.ClientSize = new System.Drawing.Size(1068, 534);
             this.ControlBox = false;
+            this.Controls.Add(this.cmbCategoria);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.label4);
@@ -196,6 +230,8 @@
         private System.Windows.Forms.TextBox txtLinkImg;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbCategoria;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtMarca;
     }

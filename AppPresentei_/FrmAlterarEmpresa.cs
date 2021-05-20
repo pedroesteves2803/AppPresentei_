@@ -27,6 +27,7 @@ namespace AppPresentei_
                 empresa.Nome = txtNome.Text;
                 empresa.Cnpj = txtCnpj.Text;
                 empresa.Senha = txtSenhaNova.Text;
+                empresa.Logo = txtLogo.Text;
                 empresa.Alterar(empresa);
                 MessageBox.Show("Alterado com sucesso!");
             }

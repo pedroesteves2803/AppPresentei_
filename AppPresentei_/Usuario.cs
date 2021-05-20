@@ -18,6 +18,7 @@ namespace AppPresentei_
         private string nomeCartao;
         private string numeroCartao;
         private string digitos;
+        private string logo;
         private int status;
 
 
@@ -28,6 +29,7 @@ namespace AppPresentei_
         public string NomeCartao { get => nomeCartao; set => nomeCartao = value; }
         public string NumeroCartao { get => numeroCartao; set => numeroCartao = value; }
         public string Digitos { get => digitos; set => digitos = value; }
+        public string Logo { get => logo; set => logo = value; }
         public int Status { get => status; set => status = value; }
 
         public Usuario(string cnpj, string senha, int status = 0)
@@ -56,7 +58,8 @@ namespace AppPresentei_
                 Nome = dr.GetString(1);
                 cnpj = dr.GetString(2);
                 Senha = dr.GetString(3);
-                status = dr.GetInt32(4);
+                Logo = dr.GetString(4);
+                status = dr.GetInt32(5);
                 valido = true;
             }
 

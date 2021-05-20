@@ -20,7 +20,7 @@ namespace AppPresentei_
         private void btnSalvar_Click(object sender, EventArgs e)
         {
 
-            Item item = new Item(txtProduto.Text, txtValor.Text, txtLink.Text, txtLinkImg.Text, txtMarca.Text);
+            Item item = new Item(txtProduto.Text, txtValor.Text, txtLink.Text, txtLinkImg.Text, txtMarca.Text, cmbCategoria.Text);
             item.Inserir(item);
             MessageBox.Show("Salvo !!!!");
             txtProduto.Clear();

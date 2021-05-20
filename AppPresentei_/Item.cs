@@ -17,7 +17,8 @@ namespace AppPresentei_
         private string link;
         private int idProduto;
         private int idEmpresa;
-        private string marca; 
+        private string marca;
+        private string categoria;
 
 
         public int Id { get => id; set => id = value; }
@@ -28,14 +29,17 @@ namespace AppPresentei_
         public int IdProduto { get => idProduto; set => idProduto = value; }
         public int IdEmpresa { get => idEmpresa; set => idEmpresa = value; }
         public string Marca { get => marca; set => marca = value; }
+        public string Categoria { get => categoria; set => categoria = value; }
 
-        public Item(string nome, string imagem, string valor, string link, string marca)
+
+        public Item(string nome, string imagem, string valor, string link, string marca, string categoria)
         {
             this.nome = nome;
             this.imagem = imagem;
             this.valor = valor;
             this.link = link;
             this.marca = marca;
+            this.categoria = categoria;
         }
 
         public Item()
@@ -43,7 +47,7 @@ namespace AppPresentei_
 
         }
 
-        public Item(int id, string nome, string imagem, string valor, string link, string marca, int idEmpresa = 0)
+        public Item(int id, string nome, string imagem, string valor, string link, string marca, string categoria, int idEmpresa = 0)
         {
             this.id = id;
             this.nome = nome;
@@ -51,20 +55,25 @@ namespace AppPresentei_
             this.valor = valor;
             this.link = link;
             this.marca = marca;
+            this.categoria = categoria;
             this.idEmpresa = idEmpresa;
         }
+
 
         public void Inserir(Item item)
         {
 
             var cmd = Banco.AbrirConexao();
-            cmd.CommandText = "insert tb_produtosempresas values(null, @nome_produto, @valor_produto, @link_produto, @imagem_produto, @marca_produto," + Program.idLogado.Id + ");";
+            cmd.CommandText = "insert into tb_produtosempresas(id_produto, nome_produto, valor_produto, link_produto, imagem_produto, marca_produto, categoria_produto, id_empresa) values(null, @nome_produto, @valor_produto, @link_produto, @imagem_produto, @marca_produto, @categoria_produto," + Program.idLogado.Id + ");";
             cmd.Parameters.Add("@nome_produto", MySqlDbType.VarChar).Value = item.Nome;
             cmd.Parameters.Add("@valor_produto", MySqlDbType.VarChar).Value = item.imagem;
             cmd.Parameters.Add("@link_produto", MySqlDbType.VarChar).Value = item.valor;
             cmd.Parameters.Add("@imagem_produto", MySqlDbType.VarChar).Value = item.valor;
             cmd.Parameters.Add("@marca_produto", MySqlDbType.VarChar).Value = item.marca;
+            cmd.Parameters.Add("@categoria_produto", MySqlDbType.VarChar).Value = item.categoria;
             cmd.ExecuteNonQuery();
+            
+
         }
 
         public void BuscarPorId(string nome)
@@ -81,6 +90,8 @@ namespace AppPresentei_
                 imagem = dr.GetString(4);
                 ///idEmpresa = dr.GetInt32(5);
                 marca = dr.GetString(6);
+                categoria = dr.GetString(7);
+
             }
 
         }
@@ -100,7 +111,8 @@ namespace AppPresentei_
                         dr.GetString(3),
                         dr.GetString(4),
                         dr.GetString(5),
-                        dr.GetInt32(6)
+                        dr.GetString(6),
+                        dr.GetInt32(7)
                         ));
             }
             return item;

@@ -9,7 +9,7 @@ namespace AppPresentei_
 {
     public static class Banco
     {
-        public static string StrCon = @"server=localhost;user id=root;database=presentei;password=";
+        public static string StrCon = @"server=softkleen.com.br;user id=alunos_presentei;database=wellington_presentei;password=f5ex0!7T";
 
         public static MySqlCommand AbrirConexao()
         {
